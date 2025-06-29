@@ -8,7 +8,7 @@ last_prediction = ""
 
 # ✅ Download model if not present (same as in message.py)
 model_path = "my_model.keras"
-model_drive_link = "https://drive.google.com/uc?id=1ViNfoobw610B44o6JzbGGseAcl3M_FsF"
+model_drive_link = "https://drive.google.com/file/d/1AJrrEXhiYs6Swv9HkqwRcUyMT4OyfnMJ/view?usp=sharing"
 
 if not os.path.exists(model_path):
     print("Model not found. Downloading from Google Drive...")

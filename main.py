@@ -11,7 +11,7 @@ import gdown  # Added for downloading from Google Drive
 
 # ---------------------- MODEL DOWNLOAD CONFIG ---------------------- #
 MODEL_PATH = "my_model.keras"
-MODEL_URL = "https://drive.google.com/uc?export=download&id=1ViNfoobw610B44o6JzbGGseAcl3M_FsF"
+MODEL_URL = "https://drive.google.com/file/d/1AJrrEXhiYs6Swv9HkqwRcUyMT4OyfnMJ/view?usp=sharing"
 
 # Download model if not exists
 if not os.path.exists(MODEL_PATH):
