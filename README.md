@@ -43,5 +43,4 @@ Emotion-Detection/
 ## 🔗 Download Model
 
 📥 Due to its large size, the pre-trained **model file is not included in the repository**. Please download it from the Google Drive link below:
-
-➡️ [Download model.keras]([https://drive.google.com/your-model-link](https://drive.google.com/file/d/1AJrrEXhiYs6Swv9HkqwRcUyMT4OyfnMJ/view?usp=sharing))
+➡️ Download model.keras => https://drive.google.com/your-model-link](https://drive.google.com/file/d/1AJrrEXhiYs6Swv9HkqwRcUyMT4OyfnMJ/view?usp=sharing
