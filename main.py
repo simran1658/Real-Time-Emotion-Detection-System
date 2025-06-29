@@ -7,8 +7,18 @@ import datetime
 import matplotlib.pyplot as plt
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
+import gdown  # Added for downloading from Google Drive
 
+# ---------------------- MODEL DOWNLOAD CONFIG ---------------------- #
+MODEL_PATH = "my_model.keras"
+MODEL_URL = "https://drive.google.com/uc?export=download&id=1ViNfoobw610B44o6JzbGGseAcl3M_FsF"
 
+# Download model if not exists
+if not os.path.exists(MODEL_PATH):
+    print("Downloading model from Google Drive...")
+    gdown.download(MODEL_URL, MODEL_PATH, quiet=False)
+    print("Model downloaded successfully.")
+# ------------------------------------------------------------------- #
 
 # Ensure OpenCV is properly installed
 try:
@@ -19,13 +29,7 @@ except AttributeError:
     exit()
 
 # Load the emotion detection model
-model_path = r"C:\Users\singh\OneDrive\Documents\Projects\Emotional detection\my_model.keras"
-
-if not os.path.exists(model_path):
-    print(f"Error: Model file not found at {model_path}. Please check the file path!")
-    exit()
-
-emotion_model = load_model(model_path)
+emotion_model = load_model(MODEL_PATH)
 
 # Define emotions list
 emotions = ['anger', 'disgust', 'fear', 'happy', 'neutral', 'sad', 'surprise']
@@ -51,7 +55,6 @@ datagen = ImageDataGenerator(
     horizontal_flip=True,
     fill_mode='nearest'
 )
-
 
 # Function to log emotions with timestamp
 def log_emotion(predicted_emotion):

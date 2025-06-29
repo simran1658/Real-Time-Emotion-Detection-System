@@ -1,9 +1,19 @@
 from flask import Flask, render_template, request, redirect, url_for
 import os
+import gdown  # Added for model download
 
 app = Flask(__name__)
 
 last_prediction = ""
+
+# ✅ Download model if not present (same as in message.py)
+model_path = "my_model.keras"
+model_drive_link = "https://drive.google.com/uc?id=1ViNfoobw610B44o6JzbGGseAcl3M_FsF"
+
+if not os.path.exists(model_path):
+    print("Model not found. Downloading from Google Drive...")
+    gdown.download(model_drive_link, model_path, quiet=False)
+    print("Model downloaded successfully.")
 
 @app.route('/')
 def index():
@@ -13,7 +23,6 @@ def index():
 def webcam():
     os.system('python main.py')  # or your webcam script
     return render_template('webcam.html')
-
 
 @app.route('/upload')
 def upload_page():
