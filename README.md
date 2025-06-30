@@ -1,4 +1,4 @@
-# 😃 Real-Time Emotion Detection System
+# 😃 PerceptiFace (Real-Time Emotion Detection System)
 
 > **Real-Time Emotion Detection System** is a 🎥✨ modern AI-powered web application that detects and classifies human emotions from live webcam feeds in real-time. Built with **Flask**, **OpenCV**, and **deep learning models**, it offers instant emotion insights through a clean and interactive interface.
 
