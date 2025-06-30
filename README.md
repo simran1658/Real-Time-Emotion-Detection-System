@@ -11,7 +11,6 @@
 - 😊 Multiple emotion classes (Happy, Sad, Angry, Neutral, etc.)  
 - 🌐 Clean, responsive, and user-friendly interface  
 - ⚡ Fast and efficient processing  
-- 🚀 Easy to set up and deploy on Render or Heroku
 
 ---
 
